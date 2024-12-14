@@ -1,0 +1,123 @@
+/* styles.css */
+
+/* Center the calculator and apply a background */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-image: url(img.jpeg);
+    backdrop-filter: blur(5px);
+}
+
+/* Container to center the calculator */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    
+}
+
+/* Calculator styling with rounded corners and box shadow */
+.calculator {
+    background-color: transparent; /* White background for calculator */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    width: 340px;
+    padding: 20px;
+    border: 1px solid #ccc; /* Light border */
+}
+
+/* Calculator display with padding, font size, and border styling */
+.calculator-display {
+    width: 90%;
+    height: 60px;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #4caf50; /* Green border to highlight the display */
+    border-radius: 10px;
+    text-align: right;
+    background-color: transparent;
+    backdrop-filter: blur(10px); /* Light green background for display */
+    color: #ffffff; /* Dark text color for better contrast */
+}
+
+/* Layout and styles for calculator buttons */
+.calculator-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Basic button styling with rounded corners and margin */
+.calculator-buttons .btn {
+    flex: 1 0 21%;
+    margin: 5px;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+    position: relative;
+    background-color: #21b1f3; /* Default color */
+    color: #ffffff;
+}
+
+/* Button specific colors */
+.btn-number {
+    background-color: #42a5f5; /* Blue for number buttons */
+}
+
+.btn-operator {
+    background-color: #ffca28; /* Yellow for operator buttons */
+}
+
+.btn-equals {
+    background-color: #66bb6a; /* Green color for equals button */
+    flex: 1 0 48%;
+}
+
+.btn-ac {
+    background-color: #ef5350; /* Red color for AC button */
+    flex: 1 0 48%;
+}
+
+/* Hover effect with subtle 3D movement */
+.calculator-buttons .btn:hover {
+    transform: translateY(-2px); /* Lift the button slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    opacity: 0.9; /* Slight opacity change */
+}
+
+/* Active state for pressing buttons */
+.calculator-buttons .btn:active {
+    transform: translateY(2px); /* Button moves down on press */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow reduces */
+}
+
+/* Glow effect for more visual feedback */
+.calculator-buttons .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.858); /* Blue glow */
+}
+
+footer{
+    color: white;
+    font-weight: 700px;
+    font-size: 1.5rem;
+    text-shadow:2px 2px #000000;
+}
+
+/* Media query for responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
